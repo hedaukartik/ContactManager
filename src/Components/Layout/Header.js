@@ -16,7 +16,7 @@ class Header extends Component {
   };
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-danger mb-3 py-0 scrolling-navbar">
+      <nav className="navbar navbar-expand-md navbar-dark bg-danger mb-3 py-0 scrolling-navbar fixed-top">
         <div className="container">
           <a href="/" className="navbar-brand">
             {this.props.branding}

@@ -6,6 +6,7 @@ import About from "./Components/Pages/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "./Context";
 import AddContact from "./Components/contacts/AddContact";
+import EditContact from "./Components/contacts/EditContact";
 import NotFound from "./Components/Pages/NotFound";
 
 class App extends Component {
@@ -14,11 +15,15 @@ class App extends Component {
       <Provider>
         <Router>
           <div className="App">
-            <Header branding="Contact Manager" />
+            <div>
+              <Header branding="Contact Manager" />
+            </div>
+
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Contacts} />
                 <Route exact path="/contact/add" component={AddContact} />
+                <Route exact path="/contact/edit/:id" component={EditContact} />
                 <Route exact path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>
